@@ -1,0 +1,285 @@
+:root {
+  --white: #fff;
+  --black: #212121;
+  --primary: #ffc107;
+  --secondary: #0097a7;
+  --gray: #757575;
+  --lightGray: #dfe9f3;
+}
+
+/* Global Styles */
+html {
+  box-sizing: border-box; /* Hack Box Model */
+  font-size: 62.5%;
+  scroll-snap-type: y mandatory;
+}
+
+/* Scroll Snap */
+.service,
+.main-navigation,
+.forms,
+.footer {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+body {
+  font-size: 16px; /* 1rem = 10px */
+  font-family: "Krub", sans-serif;
+  background-image: linear-gradient(
+    to top,
+    var(--lightGray) 0%,
+    var(--white) 100%
+  );
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+/* Main Navigation */
+
+.btn {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  width: 90%;
+  text-align: center;
+  border: none;
+}
+
+@media (min-width: 480px) {
+  .btn {
+    width: auto;
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(112, 112, 112, 0.48);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(112, 112, 112, 0.48);
+  box-shadow: 0px 0px 15px 0px rgba(112, 112, 112, 0.48);
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.title span {
+  font-size: 2rem;
+}
+
+/* Utitlities */
+.w-sm-100 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-sm-100 {
+    width: auto;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+/* Main Navigation */
+.nav-background {
+  background-color: var(--secondary);
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .main-navigation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.main-navigation a {
+  display: block;
+  text-align: center;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.main-navigation a:hover {
+  background-color: var(--primary);
+  color: var(--black);
+}
+
+.hero {
+  background-image: url(../img/house.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.hero-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0 0 0 / 70%);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container h2,
+.hero-container {
+  color: var(--white);
+}
+
+.hero-container .location {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Services */
+@media (min-width: 768px) {
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service h3 {
+  color: var(--secondary);
+  font-weight: normal;
+  align-items: center;
+}
+
+.service p {
+  line-height: 2;
+  text-align: center;
+}
+
+.icons {
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Forms */
+.forms {
+  background-color: var(--gray);
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.forms fieldset {
+  border: none;
+}
+
+.forms legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  .input-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem;
+  }
+
+  .input:nth-child(3),
+  .input:nth-child(4) {
+    grid-column: 1 / 3;
+  }
+}
+
+.input {
+  margin-bottom: 1rem;
+}
+
+.input label {
+  color: var(--white);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.input textarea {
+  height: 17rem;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+}
