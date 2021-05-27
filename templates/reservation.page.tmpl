@@ -1,0 +1,76 @@
+{{template "base" .}} 
+
+{{define "css"}}
+  <link rel="preload" href="/static/css/normalize.css" as="style" />
+  <link rel="stylesheet" href="/static/css/normalize.css" />
+  <link rel="preload" href="/static/css/style.css" as="style" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+{{end}} 
+{{define "content"}}
+  <section class="reservation">
+    <div class="hero-container">
+      <h2>Reserva tu casa <span>ya</span></h2>
+      <div class="location">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-map-pin"
+          width="88"
+          height="88"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#FFC107"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="11" r="3" />
+          <path
+            d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+          />
+        </svg>
+        <p>Guadalajara, Jalisco</p>
+      </div>
+      <a class="btn" href="#">Check Availability</a>
+    </div>
+    <!--.hero-container-->
+  </section>
+
+  <main class="container shadow">
+    <section>
+      <form class="forms-full">
+        <fieldset>
+          <legend>Search for Availability</legend>
+
+          <div class="input-container">
+            <div class="input">
+              <label for="">Starting Date</label>
+              <input
+                class="input-text"
+                type="text"
+                name=""
+                id=""
+                placeholder="yyyy-mm-dd"
+              />
+            </div>
+            <div class="input">
+              <label for="">Ending Date</label>
+              <input
+                class="input-text"
+                type="text"
+                name=""
+                id=""
+                placeholder="yyyy-mm-dd"
+              />
+            </div>
+          </div>
+          <!--.input-containers-->
+
+          <div class="align-right flex">
+            <input class="btn w-sm-100" type="button" value="Search Availability" />
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+{{end}}

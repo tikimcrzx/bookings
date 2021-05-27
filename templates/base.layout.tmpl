@@ -16,9 +16,23 @@
     {{end}}
   </head>
   <body>
+    <div class="nav-background">
+      <nav class="main-navigation container">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">General Quarters</a>
+        <a href="#">Deluxe Quarters</a>
+        <a href="#">Book Now</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
     {{block "content" .}}
 
     {{end}}
+
+    <footer class="footer">
+      <p>Todos los derechos reservados Eutiquio Javier Ortega</p>
+    </footer>
 
     {{block "js" .}}
     {{end}}

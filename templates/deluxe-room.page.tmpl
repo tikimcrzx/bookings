@@ -1,0 +1,46 @@
+{{template "base" .}} 
+
+{{define "css"}}
+  <link rel="preload" href="/static/css/normalize.css" as="style" />
+  <link rel="stylesheet" href="/static/css/normalize.css" />
+  <link rel="preload" href="/static/css/style.css" as="style" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+{{end}} 
+{{define "content"}}
+  <section class="deluxe-room">
+    <div class="hero-container">
+      <h2>Reserva tu casa <span>ya</span></h2>
+      <div class="location">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-map-pin"
+          width="88"
+          height="88"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#FFC107"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="11" r="3" />
+          <path
+            d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+          />
+        </svg>
+        <p>Guadalajara, Jalisco</p>
+      </div>
+      <a class="btn" href="#">Check Availability</a>
+    </div>
+    <!--.hero-container-->
+  </section>
+
+  <main class="container shadow">
+    <h1>Deluxe Quarters</h1>
+    <p>Etiam iaculis libero ut egestas mattis. Praesent eu dui ut magna volutpat lacinia vel et justo. Mauris eget auctor sapien, vel fermentum risus. Nunc imperdiet velit eu turpis feugiat consectetur. Phasellus sed turpis sollicitudin, faucibus ante quis, hendrerit elit. Sed convallis ligula quis laoreet varius. Sed bibendum dui sed ex egestas elementum. Morbi a mi mollis, rhoncus tellus a, eleifend massa. In quis imperdiet magna. Donec posuere lectus nec elementum posuere.
+        Donec pellentesque rhoncus odio sed tincidunt. Nam sagittis justo ut arcu feugiat pellentesque. Maecenas ullamcorper nulla non nisl dictum malesuada. Ut maximus in est sed varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras et ligula semper, faucibus felis et, euismod nisi. Curabitur non finibus nunc. Fusce vel lacus arcu. Maecenas non augue euismod purus fringilla bibendum. Pellentesque porttitor, tortor et elementum tempor, tortor nisl fermentum lectus, nec rhoncus augue turpis vel tortor. Nulla ut sagittis erat. Sed faucibus ex ac accumsan condimentum.
+        Curabitur tempus turpis sed enim sollicitudin placerat. Pellentesque rhoncus eros quam, id rhoncus sem convallis at. Nam convallis libero vel nisi convallis sagittis. Aenean a dui urna. Sed a tincidunt quam, sed volutpat justo. Nulla sed imperdiet nunc, in eleifend turpis. Aenean porttitor scelerisque risus. Nulla tempus varius mattis. Vivamus eget nisi lorem. Donec sed risus ipsum. Pellentesque consequat volutpat rhoncus.
+    </p>
+  </main>
+{{end}}

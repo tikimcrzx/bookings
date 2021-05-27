@@ -102,10 +102,22 @@ h3 {
   font-size: 2rem;
 }
 
-/* Utitlities */
+/* Utilities */
 .w-sm-100 {
   width: 100%;
 }
+
+.mb2 {
+  margin-bottom: 2rem;
+}
+
+.mt2 {
+  margin-top: 2rem;
+}
+
+.vh-85 {
+  height: 85vh;
+} 
 
 @media (min-width: 768px) {
   .w-sm-100 {
@@ -153,13 +165,31 @@ h3 {
   color: var(--black);
 }
 
-.hero {
-  background-image: url(../img/house.png);
+.hero,
+.single-room,
+.deluxe-room,
+.reservation {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 450px;
+  height: 650px;
   position: relative;
   margin-bottom: 2rem;
+}
+
+.hero {
+  background-image: url(../img/house.png);
+}
+
+.single-room {
+  background-image: url(../img/single-room.jpg);
+}
+
+.deluxe-room {
+  background-image: url(../img/deluxe-room.jpg);
+}
+
+.reservation {
+  background-image: url(../img/reservation.jpg);
 }
 
 .hero-container {
@@ -230,11 +260,21 @@ h3 {
   border-radius: 1rem;
 }
 
-.forms fieldset {
+.forms-full {
+  background-color: var(--gray);
+  width: min(90rem, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.forms fieldset, 
+.forms-full fieldset {
   border: none;
 }
 
-.forms legend {
+.forms legend,
+.forms-full legend {
   text-align: center;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -247,7 +287,7 @@ h3 {
   .input-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto 20rem;
+    grid-template-rows: auto auto;
     column-gap: 1rem;
   }
 

@@ -1,0 +1,60 @@
+{{template "base" .}} 
+
+{{define "css"}}
+  <link rel="preload" href="/static/css/normalize.css" as="style" />
+  <link rel="stylesheet" href="/static/css/normalize.css" />
+  <link rel="preload" href="/static/css/style.css" as="style" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+{{end}} 
+{{define "content"}}
+
+    <div class="vh-85">
+        <main class="container shadow mt2">
+            <section>
+                <form class="forms-full">
+                    <fieldset>
+                    <legend>Make Reservation</legend>
+
+                    <div class="input-container">
+                        <div class="input">
+                        <label for="">First Name:</label>
+                        <input
+                            class="input-text"
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="Your Name"
+                        />
+                        </div>
+                        <div class="input">
+                        <label for="">Last Name:</label>
+                        <input
+                            class="input-text"
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="Your Last Name"
+                        />
+                        </div>
+
+                        <div class="input">
+                        <label>Correo</label>
+                        <input class="input-text" type="email" placeholder="user@mail.com" />
+                        </div>
+
+                        <div class="input">
+                        <label for="">Phone Number</label>
+                        <input class="input-text" type="email" placeholder="64478794451" />
+                        </div>
+                    </div>
+                    <!--.input-containers-->
+
+                    <div class="align-right flex">
+                        <input class="btn w-sm-100" type="button" value="Enviar" />
+                    </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+    </div>
+{{end}}

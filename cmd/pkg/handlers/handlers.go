@@ -41,6 +41,26 @@ func (m *Repository) Test(rw http.ResponseWriter, r *http.Request) {
 	render.RenderHTMLTemplate(rw, "test.page.tmpl", &models.TemplateData{})
 }
 
+// SingleRoom is the single-room page handler
+func (m *Repository) SingleRoom(rw http.ResponseWriter, r *http.Request) {
+	render.RenderHTMLTemplate(rw, "single-room.page.tmpl", &models.TemplateData{})
+}
+
+// DeluxeRoom is the single-room page handler
+func (m *Repository) DeluxeRoom(rw http.ResponseWriter, r *http.Request) {
+	render.RenderHTMLTemplate(rw, "deluxe-room.page.tmpl", &models.TemplateData{})
+}
+
+// Reservation is the reservation page handler
+func (m *Repository) Reservation(rw http.ResponseWriter, r *http.Request) {
+	render.RenderHTMLTemplate(rw, "reservation.page.tmpl", &models.TemplateData{})
+}
+
+// MakeReservation is the make reservation page handler
+func (m *Repository) MakeReservation(rw http.ResponseWriter, r *http.Request) {
+	render.RenderHTMLTemplate(rw, "make-reservation.page.tmpl", &models.TemplateData{})
+}
+
 // About is the about page handler
 func (m *Repository) About(rw http.ResponseWriter, r *http.Request) {
 	// perform some logic
