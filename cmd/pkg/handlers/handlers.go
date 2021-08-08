@@ -44,6 +44,15 @@ func (m *Repository) Home(rw http.ResponseWriter, r *http.Request) {
 	})
 }
 
+func (m *Repository) Test(rw http.ResponseWriter, r *http.Request) {
+	stringMap := make(map[string]string)
+	stringMap["maps"] = ""
+
+	render.RenderTemplate(rw, "test.page.tmpl", &models.TemplateData{
+		StringMap: stringMap,
+	})
+}
+
 // About is the about page handler
 func (m *Repository) About(rw http.ResponseWriter, r *http.Request) {
 	stringMap := make(map[string]string)
